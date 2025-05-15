@@ -143,7 +143,7 @@ Job Portal Website/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/job-portal-website.git
+   git clone https://github.com/hasnainabdi/job-portal-website.git
    ```
 
 2. Install dependencies:
