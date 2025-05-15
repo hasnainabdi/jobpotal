@@ -189,8 +189,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - [your@email.com](mailto:your@email.com)
-Project Link: [https://github.com/yourusername/job-portal-website](https://github.com/yourusername/job-portal-website)
+Your Name - [your@email.com](mailto:m.hasnainreactions@gmail.com)
+Project Link: [https://github.com/hasnainabdi/job-portal-website](https://github.com/hasnainabdi/job-portal-website)
 
 ## Acknowledgments
 
