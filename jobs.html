@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Jobs - Find Latest Job Opportunities | Job Portal</title>
+    <meta name="description" content="Browse through thousands of job opportunities across various industries. Filter by location, experience level, and job type to find your perfect match.">
+    <meta name="keywords" content="job listings, career opportunities, job search, find jobs, job openings">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Browse Jobs - Find Latest Job Opportunities | Job Portal">
+    <meta property="og:description" content="Browse through thousands of job opportunities across various industries. Filter by location, experience level, and job type to find your perfect match.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://yourjobportal.com/jobs">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "name": "Available Jobs",
+        "description": "Browse through our extensive list of job opportunities across various industries and locations.",
+        "industry": "Multiple Industries",
+        "occupationalCategory": "Various Positions",
+        "employmentType": ["FULL_TIME", "PART_TIME", "CONTRACT", "TEMPORARY", "INTERN"],
+        "jobLocationType": "Multiple Locations"
+    }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg relative z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-300" aria-label="JobPortal Home">JobPortal</a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-4 animate-fade-in-down">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="jobs.html" class="text-primary font-semibold">Jobs</a>
+                    <a href="companies.html" class="text-gray-700 hover:text-primary transition-colors duration-200">Companies</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors duration-200">About</a>
+                    <a href="apply.html" class="text-primary hover:opacity-80 font-semibold transition-opacity duration-200">Apply Now</a>
+                    <a href="post-job.html" class="bg-secondary text-primary px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity duration-200 shadow-sm hover:shadow">Post a Job</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-500 hover:text-primary focus:outline-none focus:text-primary" aria-label="Toggle menu" aria-expanded="false">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg rounded-b-lg border-t">
+                <div class="px-4 py-2 space-y-2">
+                    <a href="index.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">Home</a>
+                    <a href="jobs.html" class="block text-primary font-semibold py-2">Jobs</a>
+                    <a href="companies.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">Companies</a>
+                    <a href="about.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">About</a>
+                    <a href="apply.html" class="block text-primary hover:opacity-80 font-semibold py-2 transition-opacity duration-200">Apply Now</a>
+                    <a href="post-job.html" class="block bg-secondary text-primary px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity duration-200 text-center mb-2">Post a Job</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <div class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold mb-4">Find Your Perfect Job</h1>
+                <p class="text-lg opacity-90">Search through thousands of job listings</p>
+            </div>
+            <div class="bg-white rounded-xl p-8 shadow-lg mt-8 lg:col-span-1 border border-gray-100">
+                <div class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Search job titles" class="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-20 bg-white text-gray-800 placeholder-gray-400">
+                            <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="Location" class="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-20 bg-white text-gray-800 placeholder-gray-400">
+                            <i class="fas fa-map-marker-alt absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        </div>
+                        <button class="bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-300">
+                            Search Jobs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Filters Section -->
+            <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 sm sticky top-4">
+                <h3 class="text-lg font-semibold mb-4">Filters</h3>
+                
+                <!-- Job Type -->
+                <div class="mb-6 bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="text-gray-800 font-semibold mb-3 text-lg">Job Type</h4>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Full Time</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Part Time</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Contract</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Remote</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Experience Level -->
+                <div class="mb-6 bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="text-gray-800 font-semibold mb-3 text-lg">Experience Level</h4>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Entry Level</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Mid Level</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">Senior Level</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Salary Range -->
+                <div class="mb-6 bg-white p-4 rounded-lg shadow-sm">
+                    <h4 class="text-gray-800 font-semibold mb-3 text-lg">Salary Range</h4>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">$0 - $50k</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">$50k - $100k</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">$100k - $150k</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
+                            <input type="checkbox" class="w-4 h-4 rounded text-primary focus:ring-primary">
+                            <span class="text-gray-800">$150k+</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Clear Filters Button -->
+                <button class="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white py-2 rounded-lg transition-colors duration-300">
+                    Clear Filters
+                </button>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="mt-8 lg:col-span-2 space-y-6">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-2xl font-bold text-gray-800">Available Positions</h2>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-600">Sort by:</span>
+                        <select class="border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-20 bg-white text-gray-800 font-medium cursor-pointer hover:border-primary transition-colors duration-300">
+                            <option value="recent">Most Recent</option>
+                            <option value="salary-high">Salary: High to Low</option>
+                            <option value="salary-low">Salary: Low to High</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Job Cards Container -->
+                <div class="space-y-4" id="jobListings">
+                    <!-- Job cards will be added here dynamically -->
+                </div>
+
+                <!-- Load More -->
+                <div class="text-center mt-8">
+                    <button class="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 inline-flex items-center space-x-2">
+                        <span>Load More Jobs</span>
+                        <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About Column -->
+                <div class="space-y-4">
+                    <h4 class="text-2xl font-bold text-primary mb-4">JobPortal</h4>
+                    <p class="text-gray-400">Connecting talented professionals with innovative companies worldwide.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">For Employers</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Post a Job</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Browse Candidates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Section -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div>
+                        © 2025 JobPortal. All rights reserved.
+                    </div>
+                    <div>
+                        Design by <a href="https://hasnainabdi.github.io/portfolio/" target="_blank" class="text-primary hover:text-white transition-colors duration-300">Webify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/jobs.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

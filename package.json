@@ -1,0 +1,15 @@
+{
+  "name": "job-portal-website",
+  "version": "1.0.0",
+  "description": "A modern job portal website",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": ["job-portal", "tailwindcss"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0"
+  }
+}

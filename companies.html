@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Companies Hiring Now | Job Portal</title>
+    <meta name="description" content="Discover top companies hiring now. Browse through company profiles, culture, and open positions. Find your next employer today!">
+    <meta name="keywords" content="companies hiring, employer profiles, company jobs, career opportunities, top employers">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Top Companies Hiring Now | Job Portal">
+    <meta property="og:description" content="Discover top companies hiring now. Browse through company profiles, culture, and open positions. Find your next employer today!">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://yourjobportal.com/companies">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Job Portal Companies",
+        "description": "Browse through profiles of top companies hiring across various industries.",
+        "url": "https://yourjobportal.com/companies"
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg relative z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary hover:scale-105 transition-transform duration-300" aria-label="JobPortal Home">JobPortal</a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-4 animate-fade-in-down">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition-colors duration-200">Home</a>
+                    <a href="jobs.html" class="text-gray-700 hover:text-primary transition-colors duration-200">Jobs</a>
+                    <a href="companies.html" class="text-primary font-semibold">Companies</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition-colors duration-200">About</a>
+                    <a href="apply.html" class="text-primary hover:opacity-80 font-semibold transition-opacity duration-200">Apply Now</a>
+                    <a href="post-job.html" class="bg-secondary text-primary px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity duration-200 shadow-sm hover:shadow">Post a Job</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-500 hover:text-primary focus:outline-none focus:text-primary" aria-label="Toggle menu" aria-expanded="false">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg rounded-b-lg border-t">
+                <div class="px-4 py-2 space-y-2">
+                    <a href="index.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">Home</a>
+                    <a href="jobs.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">Jobs</a>
+                    <a href="companies.html" class="block text-primary font-semibold py-2">Companies</a>
+                    <a href="about.html" class="block text-gray-700 hover:text-primary py-2 transition-colors duration-200">About</a>
+                    <a href="apply.html" class="block text-primary hover:opacity-80 font-semibold py-2 transition-opacity duration-200">Apply Now</a>
+                    <a href="post-job.html" class="block bg-secondary text-primary px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity duration-200 text-center mb-2">Post a Job</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-primary to-primary-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-bold mb-4">Discover Top Companies</h1>
+                <p class="text-lg opacity-90 max-w-2xl mx-auto">Find your next career opportunity at leading companies worldwide</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-lg max-w-4xl mx-auto transform hover:scale-[1.02] transition-all duration-300">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                    <div class="relative md:col-span-5">
+                        <input type="text" id="searchInput" placeholder="Company name or industry" class="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 focus:border-primary bg-white text-gray-800 placeholder-gray-400">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <div class="relative md:col-span-5">
+                        <select class="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 appearance-none bg-white text-gray-800 cursor-pointer">
+                            <option value="">All Industries</option>
+                            <option value="tech">Technology</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="retail">Retail</option>
+                        </select>
+                        <i class="fas fa-building absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <button id="searchButton" class="md:col-span-2 bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 flex items-center justify-center space-x-2 w-full">
+                        <span>Search</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                    <div class="text-gray-600">Companies</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">10k+</div>
+                    <div class="text-gray-600">Job Openings</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">1M+</div>
+                    <div class="text-gray-600">Job Seekers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-2">50k+</div>
+                    <div class="text-gray-600">Placements</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Companies Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Featured Companies</h2>
+                    <p class="text-gray-600">Top employers with great opportunities</p>
+                </div>
+                <a href="#all-companies" class="text-primary hover:text-primary-dark font-semibold flex items-center space-x-2 group">
+                    <span>View All</span>
+                    <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="featuredCompanies">
+                <!-- Featured company cards will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- All Companies Section -->
+    <div class="py-16 bg-white" id="all-companies">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">All Companies</h2>
+                    <p class="text-gray-600">Browse through our comprehensive list of companies</p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <span class="text-gray-600 font-medium">Sort by:</span>
+                    <select class="border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white text-gray-800 font-medium cursor-pointer hover:border-primary transition-colors duration-200">
+                        <option>Most Popular</option>
+                        <option>Most Jobs</option>
+                        <option>Alphabetical</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="companyGrid">
+                <!-- Company cards will be added here dynamically -->
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center mt-8">
+                <button class="bg-white text-primary font-semibold px-6 py-3 rounded-lg border-2 border-primary hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center space-x-2">
+                    <span>Load More Companies</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <h4 class="text-2xl font-bold text-primary mb-4">JobPortal</h4>
+                    <p class="text-gray-400">Connecting talented professionals with innovative companies worldwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Find Jobs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Companies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">For Employers</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Post a Job</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Browse Candidates</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Pricing Plans</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4">Contact Info</h5>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-gray-400">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span>123 Business Avenue, New York, USA</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-gray-400">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>+1 234 567 8900</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-gray-400">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>contact@jobportal.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="text-center text-gray-400 text-sm">
+                    © 2025 JobPortal. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/companies.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
